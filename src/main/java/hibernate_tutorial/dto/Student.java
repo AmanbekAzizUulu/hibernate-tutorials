@@ -29,6 +29,10 @@ public class Student {
 		this.dateOfBirth = LocalDate.of(dateOfBirth.getYear(), dateOfBirth.getMonth() , dateOfBirth.getDay());
 	}
 
+	public Student() {
+
+	}
+
 	public long getId() {
 		return id;
 	}
@@ -64,10 +68,11 @@ public class Student {
 	@Override
 	public String toString() {
 		return "Student {" +
-		"\n\tid = " + this.id +
-		"\n\tfirst name = " + this.firstName +
-		"\n\tlast name = " + this.lastName +
-		"\n\tdate of birth = " + this.dateOfBirth ;
+		"\n\t\tid = " + this.id +
+		"\n\t\tfirst name = " + this.firstName +
+		"\n\t\tlast name = " + this.lastName +
+		"\n\t\tdate of birth = " + this.dateOfBirth +
+		"\n}";
 	}
 
 
