@@ -1,22 +1,20 @@
 package hibernate_tutorial;
 
 import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.cfg.Configuration;
 
-import hibernate_tutorial.dto.User;
+import hibernate_tutorial.dto.Student;
+import hibernate_tutorial.dto.dto_utils.DateOfBirth;
+import hibernate_tutorial.util.HibernateUtil;
 
 public class HibernateDemo {
 	public static void main(String[] args) {
-		User user = new User(  "Aiturgan", "Karabalaeva");
+		Session session = HibernateUtil.getSessionFactory().openSession();
 
-		System.out.println(user);
-
-		SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
-		Session session = sessionFactory.openSession();
+		Student student = new Student("Datkayim", "Sabyrbekova",  new DateOfBirth(1998, 10, 14));
+		System.out.println(student);
 
 		session.beginTransaction();
-		session.persist(user);
+		session.persist(student);
 		session.getTransaction().commit();
 	}
 }
