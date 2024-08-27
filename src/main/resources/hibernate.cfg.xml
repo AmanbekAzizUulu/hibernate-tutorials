@@ -36,6 +36,7 @@
 		<!-- Маппинг классов (сущностей) -->
 		<mapping class="hibernate_tutorial.dto.User"/>
 		<mapping class="hibernate_tutorial.dto.Student"/>
-
+		<mapping class="hibernate_tutorial.dto.Course"/>
+		<mapping class="hibernate_tutorial.dto.Enrollment"/>
 	</session-factory>
 </hibernate-configuration>

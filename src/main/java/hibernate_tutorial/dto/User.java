@@ -14,12 +14,14 @@ public class User {
 	private String lastName;
 
 	public User() {
+
     }
-	// public User(long id, String firstName, String lastName) {
-	// 	this.id = id;
-	// 	this.firstName = firstName;
-	// 	this.lastName = lastName;
-	// }
+
+	public User(long id, String firstName, String lastName) {
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
 
 	public User(String firstName, String lastName) {
 		this.firstName = firstName;
