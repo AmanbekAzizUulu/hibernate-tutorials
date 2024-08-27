@@ -2,12 +2,15 @@ package hibernate_tutorial.dto;
 
 import java.time.LocalDate;
 
+import hibernate_tutorial.dto.address.Address;
 import hibernate_tutorial.dto.dto_utils.DateOfBirth;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 @Entity(name = "students")
 public class Student {
@@ -23,9 +26,17 @@ public class Student {
 	@Column(name = "date_of_birth")
 	private LocalDate dateOfBirth;
 
-	public Student(String firstName, String lastName, DateOfBirth dateOfBirth) {
+	@ManyToOne
+	@JoinColumn(name = "address_id")
+	private Address address;
+
+	public Student(){
+	}
+
+	public Student(String firstName, String lastName, DateOfBirth dateOfBirth, Address address) {
 		this.firstName = firstName;
 		this.lastName = lastName;
+		this.address = address;
 		this.dateOfBirth = LocalDate.of(dateOfBirth.getYear(), dateOfBirth.getMonth() , dateOfBirth.getDay());
 	}
 
@@ -68,6 +79,14 @@ public class Student {
 		"\n\tfirst name = " + this.firstName +
 		"\n\tlast name = " + this.lastName +
 		"\n\tdate of birth = " + this.dateOfBirth ;
+	}
+
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
 	}
 
 

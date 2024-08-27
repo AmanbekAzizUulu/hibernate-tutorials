@@ -15,7 +15,7 @@ public class User {
 
 	public User() {
     }
-	
+
 	public User(long id, String firstName, String lastName) {
 		this.id = id;
 		this.firstName = firstName;

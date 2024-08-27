@@ -36,6 +36,10 @@
 		<!-- Маппинг классов (сущностей) -->
 		<mapping class="hibernate_tutorial.dto.User"/>
 		<mapping class="hibernate_tutorial.dto.Student"/>
+		<mapping class="hibernate_tutorial.dto.address.Address"/>
+		<mapping class="hibernate_tutorial.dto.address.Region"/>
+		<mapping class="hibernate_tutorial.dto.address.Street"/>
+		<mapping class="hibernate_tutorial.dto.address.City"/>
 
 	</session-factory>
 </hibernate-configuration>
