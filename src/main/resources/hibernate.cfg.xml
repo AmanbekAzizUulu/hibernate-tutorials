@@ -34,8 +34,8 @@
 		<property name="hibernate.show_sql">true</property>
 
 		<!-- Маппинг классов (сущностей) -->
-		<mapping class="hibernate_tutorial.dto.User"/>
-		<mapping class="hibernate_tutorial.dto.Student"/>
+		<mapping class="hibernate_tutorial.dto.Employee"/>
+		<mapping class="hibernate_tutorial.dto.Department"/>
 
 	</session-factory>
 </hibernate-configuration>
