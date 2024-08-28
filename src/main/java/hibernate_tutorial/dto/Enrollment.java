@@ -76,19 +76,19 @@ public class Enrollment {
 			this.studentId = studentId;
 			this.courseId = courseId;
 		}
-
+		@SuppressWarnings(value = "unused")
 		protected Long getStudentId() {
 			return studentId;
 		}
-
+		@SuppressWarnings(value = "unused")
 		protected void setStudentId(Long studentId) {
 			this.studentId = studentId;
 		}
-
+		@SuppressWarnings(value = "unused")
 		protected Long getCourseId() {
 			return courseId;
 		}
-
+		@SuppressWarnings(value = "unused")
 		protected void setCourseId(Long courseId) {
 			this.courseId = courseId;
 		}
